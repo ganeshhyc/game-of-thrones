@@ -8,6 +8,7 @@ import { BookInfoComponent } from './book-info/book-info.component';
 import { HouseInfoComponent } from './house-info/house-info.component';
 import { CharacterInfoComponent } from './character-info/character-info.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GotHttpService } from './got-http.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {path:'**',component:NotFoundComponent}
     ])
   ],
-  providers: [],
+  providers: [
+    GotHttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
