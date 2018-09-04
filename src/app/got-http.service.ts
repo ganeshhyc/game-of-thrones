@@ -12,4 +12,10 @@ export class GotHttpService {
   public getAllBooks=():any=>{
     return this._http.get(this.baseUrl+"/books");
   }
+  public getAllCharacters=():any=>{
+    return this._http.get(this.baseUrl+"/characters");
+  }
+  public getAllHouses=():any=>{
+    return this._http.get(this.baseUrl+"/houses");
+  }
 }

@@ -18,5 +18,17 @@ export class HomeComponent implements OnInit {
       error => {  }
     )
   }
+  public getHouses = ():any=>{
+    this.gotHttpService.getAllHouses().subscribe(
+      data => { console.log(data) },
+      error => {}
+    )
+  }
+  public getCharacters = ():any=>{
+    this.gotHttpService.getAllCharacters().subscribe(
+      data => { console.log(data) },
+      error => {}
+    )
+  }
 
 }
