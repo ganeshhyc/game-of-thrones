@@ -9,6 +9,7 @@ import { HouseInfoComponent } from './house-info/house-info.component';
 import { CharacterInfoComponent } from './character-info/character-info.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GotHttpService } from './got-http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { GotHttpService } from './got-http.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path:'home',component:HomeComponent},
       {path:'', redirectTo:'home', pathMatch:'full'},
