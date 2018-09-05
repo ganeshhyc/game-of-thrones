@@ -24,7 +24,6 @@ export class CharacterInfoComponent implements OnInit {
   ngOnInit() {
     this.myId=this._route.snapshot.paramMap.get('id');
     this.gotHttpService.getAllCharacters().subscribe(res=>this.cardObj=res);
-    console.log(this.getSingleCharacter())
   }
   
 
