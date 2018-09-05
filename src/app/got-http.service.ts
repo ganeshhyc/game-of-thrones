@@ -13,7 +13,8 @@ export class GotHttpService {
     return this._http.get(this.baseUrl+"/books");
   }
   public getAllCharacters=():any=>{
-    return this._http.get(this.baseUrl+"/characters");
+    let characters = this._http.get(this.baseUrl+"/characters?page=1&pageSize=10000");
+    return characters
   }
   public getAllHouses=():any=>{
     return this._http.get(this.baseUrl+"/houses");
