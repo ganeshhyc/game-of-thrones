@@ -15,10 +15,17 @@ export class CharacterInfoComponent implements OnInit {
   public myId;
   public cardObj;
   constructor(public location:Location,public _route:ActivatedRoute,public router:Router,public gotHttpService:GotHttpService) { }
-
+  public goBack=():any=>{
+    this.location.back();
+  }
+  public getSingleCharacter = () :any =>{
+    return this.cardObj.find(res=>res.name==this.myId)
+  }
   ngOnInit() {
     this.myId=this._route.snapshot.paramMap.get('id');
     this.gotHttpService.getAllCharacters().subscribe(res=>this.cardObj=res);
+    console.log(this.getSingleCharacter())
   }
+  
 
 }

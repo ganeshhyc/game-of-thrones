@@ -25,13 +25,14 @@
               <div class="card-header">{{character.name}}</div>
               <div class="card-body">
                 <h5 class="card-title">{{character.culture}}</h5>
-                <button [routerLink]="['/character',index]" type="button" class="btn btn-outline-light">Get Info!</button>
+                <button [routerLink]="['/character',character.name]" type="button" class="btn btn-outline-light">Get Info!</button>
               </div>
             </div>
         </div>
       </div>
   </div>
 </div>
+<br><br>
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Houses</h1><br>
