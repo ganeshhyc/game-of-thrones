@@ -1,3 +1,16 @@
-<p>
-  book-info works!{{myId}}
-</p>
+<br><br>
+<div class="jumbotron jumbotron-fluid" *ngIf="cardObj">
+    <div class="container">
+      <h1 class="display-4">{{cardObj[myId].name}}</h1>
+      <p class="lead">
+        Authors:
+        <span *ngFor="let author of cardObj[myId].authors; let first=first;let last=last;">
+          {{author}}
+          {{last?"":", "}}
+        </span>, ISBN: 
+        <span>{{cardObj[myId].isbn}}</span><br>Released: 
+        <span>{{cardObj[myId].released}}</span>, Publisher: 
+        <span>{{cardObj[myId].publisher}}</span>
+      </p>
+    </div>
+  </div>

@@ -9,10 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookInfoComponent implements OnInit {
   public myId;
+  public cardObj;
   constructor(public _route:ActivatedRoute, public router:Router, public gotHttpService:GotHttpService) { }
 
   ngOnInit() {
     this.myId=this._route.snapshot.paramMap.get('id');
+    this.gotHttpService.getAllBooks().subscribe(
+      res=>this.cardObj=res
+    )
   }
 
 }
